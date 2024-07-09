@@ -73,4 +73,4 @@ $Body += $CurrentLicense | Sort-Object RemainingUnits | Where-Object {$_.License
 $Body += "<p><center>Generated: $(Get-Date)</center></p>"
 Send-MailMessage -From "SenderEmail@domain.com" -To "RecipientEmail@domain.com" -Subject "Microsoft License Report" -Body $Body -SmtpServer "smtp.domain.com" -BodyHtml
 
-Disconnect-Graph
+Disconnect-MgGraph
